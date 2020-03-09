@@ -11,7 +11,7 @@ ENV PLUGIN_HUGO_ARCH=$HUGO_ARCH
 ENV PLUGIN_HUGO_SHIPPED_VERSION=$HUGO_VERSION
 
 RUN apk --no-cache add bash git && \
-    wget -O- https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-${HUGO_ARCH}.tar.gz | tar xz -C /bin
+    wget -O- https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-${HUGO_ARCH}.tar.gz | tar xz -C /bin
 
 RUN apk --no-cache add nodejs npm && \
     npm install -g autoprefixer && \
